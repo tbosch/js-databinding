@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <script type="text/javascript" src="lib/angular-0.9.15.js" ng:autobind></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <style>
+        .ng-validation-error {
+            border: 5px solid red;
+        }
+
+    </style>
+</head>
+
+<body ng:controller="CustomerController">
+<h1>Welcome to Testdriven JavaScript Development!</h1>
+<table>
+    <tr>
+        <td colspan="2">
+            <input type="text" name="state" disabled="disabled"></td>
+    </tr>
+    <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" id="name" name="data.name" ng:required></td>
+    </tr>
+    <tr>
+        <td><label for="surname">Vorname</label></td>
+        <td><input type="text" id="surname" name="data.surname" ng:required></td>
+    </tr>
+    <tr>
+        <td><label for="street">Strasse</label></td>
+        <td><input type="text" id="street" name="data.street"></td>
+    </tr>
+    <tr>
+        <td><label for="plz">PLZ</label></td>
+        <td><input type="text" id="plz" name="data.plz"></td>
+    </tr>
+    <tr>
+        <td><label for="city">Ort</label></td>
+        <td><input type="text" id="city" name="data.city"></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="text" id="email" name="data.email" ng:required ng:validate="email"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button id="save" ng:click="save()" disabled="{{!isValid()}}">Speichern</button>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
