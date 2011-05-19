@@ -9,10 +9,10 @@ This is a sample application that shows the usage of angular as databinding laye
 
 UI
 ---------
-The ui is made up of these part:
+The ui only contains a controller javascript, that connects the model with the view.
 
-- controller.js: Adds controller logic to combine the model with the view.
-
+- index1.html / controller1.js: Implements the validation all alone.
+- index2.html / controller1.js: Implements the validation using the angular tags.
 
 Backend
 -----------
