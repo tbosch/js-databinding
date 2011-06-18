@@ -21,8 +21,8 @@ Backend
 
 The backend is a simple servlet that stores data in memory.
 
-- A POST to `/js-tdd/rest/customer/*` will create a new customer, assign an id and return the new customer
-- A GET to `/js-tdd/rest/customer/<id>` will load the customer with the given id
+- A POST to `/js-databinding/rest/customer/*` will create a new customer, assign an id and return the new customer
+- A GET to `/js-databinding/rest/customer/<id>` will load the customer with the given id
 
 Project-Setup
 -------------
@@ -36,7 +36,7 @@ The js-test-driver server can be started via the jstd-server.sh command.
 
 The tests can be run via the jstd-client.sh command.
 
-The tests may also be run in the jasmine html runner via the url `http://localhost:8080/js-tdd/SpecRunner.html`
+The tests may also be run in the jasmine html runner via the url `http://localhost:8080/js-databinding/SpecRunner.html`
 
 Maven-Configuration
 -------------------
