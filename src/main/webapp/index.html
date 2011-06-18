@@ -1,9 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+        "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:ng="http://angularjs.org">
 <head>
     <script type="text/javascript" src="lib/angular-0.9.15.js" ng:autobind></script>
-    <script type="text/javascript" src="js/controller2.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/validators.js"></script>
     <style>
         .ng-validation-error {
             border: 5px solid red;
@@ -21,27 +23,36 @@
     </tr>
     <tr>
         <td><label for="name">Name</label></td>
-        <td><input type="text" id="name" name="data.name" ng:required></td>
+        <td><input type="text" id="name" name="customer.name" ng:required ng:validate="simpleName"></td>
     </tr>
     <tr>
         <td><label for="surname">Vorname</label></td>
-        <td><input type="text" id="surname" name="data.surname" ng:required></td>
+        <td><input type="text" id="surname" name="customer.surname" ng:required></td>
     </tr>
     <tr>
         <td><label for="street">Strasse</label></td>
-        <td><input type="text" id="street" name="data.street"></td>
+        <td><input type="text" id="street" name="customer.street"></td>
     </tr>
     <tr>
         <td><label for="plz">PLZ</label></td>
-        <td><input type="text" id="plz" name="data.plz"></td>
+        <td><input type="text" id="plz" name="customer.plz"></td>
     </tr>
     <tr>
         <td><label for="city">Ort</label></td>
-        <td><input type="text" id="city" name="data.city"></td>
+        <td><input type="text" id="city" name="customer.city"></td>
     </tr>
     <tr>
         <td><label for="email">Email</label></td>
-        <td><input type="text" id="email" name="data.email" ng:required ng:validate="email"></td>
+        <td><input type="text" id="email" name="customer.email" ng:validate="email" ng:required></td>
+    </tr>
+    <tr>
+        <td colspan="2"><label for="city">Telefonnummern:</label></td>
+    </tr>
+    <tr ng:repeat="phone in customer.phones">
+        <td><label>{{phone.type}}</label></td>
+        <td>
+            <input type="text" name="phone.value">
+        </td>
     </tr>
     <tr>
         <td colspan="2">

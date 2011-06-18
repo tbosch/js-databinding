@@ -28,23 +28,13 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>run-unit-tests</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <config>jstd-unit.conf</config>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>run-end2end-tests</id>
+                        <id>run-tests</id>
                         <phase>integration-test</phase>
                         <goals>
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <config>jstd-end2end.conf</config>
+                            <config>${project.basedir}/jstd.conf</config>
                         </configuration>
                     </execution>
                 </executions>

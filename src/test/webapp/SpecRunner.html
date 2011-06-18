@@ -8,13 +8,15 @@
     <script type="text/javascript" src="lib/jasmine-html.js"></script>
 
     <!-- include source files here... -->
-    <script type="text/javascript" src="lib/angular-0.9.15.js"></script>
+    <script type="text/javascript" src="lib/angular-0.9.15.js" ng:autobind></script>
     <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/validators.js"></script>
 
     <!-- include spec files here... -->
-    <script type="text/javascript" src="unit/emptySpec.js"></script>
-    <script type="text/javascript" src="end2end/emptySpec.js"></script>
-
+    <script type="text/javascript" src="specs/controllerSpec.js"></script>
+    <script type="text/javascript" src="specs/customerServiceSpec.js"></script>
+    <script type="text/javascript" src="specs/simpleNameValidatorSpec.js"></script>
 
 </head>
 <body>
